@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-gray-50 antialiased">
         <AuthProvider>
           <AppointmentProvider>
-            <div className="max-w-md mx-auto min-h-screen bg-white relative shadow-xl">
+            <div className="min-h-screen bg-white">
               {children}
             </div>
           </AppointmentProvider>

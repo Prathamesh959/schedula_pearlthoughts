@@ -50,10 +50,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mobile app-like scrollbar */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+/* Hide scrollbar only on mobile */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+/* Utility: hide scrollbar for horizontal scroll containers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Custom calendar styles */
@@ -61,3 +72,4 @@ body {
   background-color: hsl(187, 100%, 42%) !important;
   color: white !important;
 }
+
